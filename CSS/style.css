@@ -13,9 +13,9 @@
 body {
     font-family: 'Roboto Slab', serif;
     font-size: 5vw;
-    width: 100vw;
-    height: 100dvh;
-    overflow: hidden;
+    max-width: 100dvw;
+    max-height: 100dvh;
+    /* overflow: hidden; */
     background: #5500df;
 
 }
@@ -33,6 +33,7 @@ body {
     /* background: #e0e0e0; */
     box-shadow: inset 7px 7px 13px #bcbcbc,
                 inset -7px -7px 13px #ffffff;
+    overflow: hidden;
 }
 
 .clock {
