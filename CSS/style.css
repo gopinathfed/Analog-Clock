@@ -241,8 +241,8 @@ footer {
 
 .time {
     position: absolute;
-    width: 100px;
-    height: 30px;
+    width: 25%;
+    height: 5%;
     top: 30%;
     left: 50%;
     font-size: clamp(20px,3vw,10px);
@@ -253,6 +253,31 @@ footer {
     background: none;
     text-shadow: .5px .5px white,
                 -.5px -.5px white;
+}
+
+.buttons {
+    z-index: 7;
+    position: absolute;
+    top: 0;
+    width: 11vw;
+    height: 4vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset img {
+    width: 4vw;
+    height: 4vw;
+    z-index: 5;
+}
+
+.submit img {
+    width: 4.5vw;
+    height: 4.5vw;
+    z-index: 5;
 }
 
 @media  (min-width: 1200px) {
@@ -298,5 +323,22 @@ footer {
     .second-hand {
         width: 27px;
         height: 27px;
+    }
+
+    .reset img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .submit img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttons {
+        width: 100px;
+    }
+    .time {
+        width: 130px;
     }
 }
