@@ -365,4 +365,7 @@ footer {
     .time {
         width: 130px;
     }
+    .change {
+        margin-left: 80%;
+    }
 }
