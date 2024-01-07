@@ -4,6 +4,8 @@ const hourHand = document.querySelector('.hour-hand');
 const time = document.querySelector('.time');
 const reset = document.querySelector('.reset');
 const submit = document.querySelector('.submit');
+const change = document.querySelector('.change');
+const timeChange = document.querySelector('.change-time');
 
 /*
 How to change time :
@@ -24,6 +26,10 @@ let increaseUserTime;
 let clicked = false;
 let stop = true;
 let timeArray = [];
+
+change.addEventListener('click',()=>{
+    timeChange.classList.toggle("flex");
+})
 
 timeToDeg();
 let interval = setInterval(timeToDeg, 1000);
