@@ -21,10 +21,7 @@ let minuteDeg;
 let secondDeg;
 let second = 0;
 let hour;
-let user = false;
 let increaseUserTime;
-let clicked = false;
-let stop = true;
 let timeArray = [];
 
 change.addEventListener('click',()=>{
@@ -47,7 +44,6 @@ function timeToDeg() {
     hourDeg = ( hour * 30 ) + ( minute * .5 );
 
     rotate();
-    setTime();
 }
 
 function getTime() {
@@ -94,48 +90,28 @@ function increaseTime() {
     if(hour == 13){
         hour = 1;
     }
-
-    console.log(hour,minute,second)
-
     runClock();
     rotate();
-    setTime();
 }
 
 submit.addEventListener('click',() => {
     clearInterval(interval);
-    stop = !stop;
-    user = true;
-console.log(stop)
-    if(stop){
-            getTime();
-            setClock();
-            clearInterval(increaseUserTime);
-            increaseUserTime = setInterval(increaseTime, 1000);
-    }
-    else {
-    clearInterval(increaseUserTime);
-    }
+        getTime();
+        setClock();
+        increaseTime();
+        clearInterval(increaseUserTime);
+        increaseUserTime = setInterval(increaseTime, 1000);
 });
 
 reset.addEventListener('click', () => {
+    clearInterval(increaseUserTime);
+    clearInterval(interval);
     timeToDeg();
     interval = setInterval(timeToDeg, 1000);
-    clearInterval(increaseUserTime);
-    user = false;
 });
 
 function rotate() {
     hourHand.style.transform = `rotate(${hourDeg}deg)`;
     minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
     secondHand.style.transform = `rotate(${secondDeg}deg)`;
-}
-
-function setTime() {
-    if(!user) {
-        hour = hour.toString();
-        hour = hour < 10 ? '0' + hour : hour;
-        minute =  minute < 10 ? '0' + minute.toString() : minute;
-    }
-    time.value = `${hour}:${minute}`;
 }

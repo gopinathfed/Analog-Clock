@@ -187,7 +187,7 @@ body {
     position: absolute;
     width: 2vw;
     height: 50%;
-    background: linear-gradient(transparent 0 35%,black 35% 100%);
+    background: linear-gradient(transparent 0 38%,black 38% 100%);
     left: 50%;
     transform-origin: bottom;
     transform: translateX(-50%) rotate(110deg);
@@ -247,11 +247,15 @@ footer {
     width: 100px;
     height: 40px;
     font-size: 1rem;
-    background-color: #fafcff;
+    font-weight: 600;
     border: 0;
     border-radius: 20px;
-    margin-left: 80%;
+    margin-left: 60%;
     margin-top: 5%;
+    cursor: pointer;
+    background: #e0e0e0;
+    box-shadow: inset 18px 18px 36px #acacac,
+            inset -18px -18px 36px #ffffff;
 }
 
 .change-time {
@@ -265,8 +269,10 @@ footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: rgb(255, 255, 255);
     border-radius: 100px;
+    border-radius: 58px;
+    background: #e0e0e0;
+    box-shadow:  29px 29px 58px #b8b8b8;
     z-index: 100;
 }
 
@@ -285,6 +291,7 @@ footer {
     z-index: 3;
     border: 0;
     background: none;
+    cursor: pointer;
 }
 
 .buttons {
@@ -295,6 +302,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .reset img {
