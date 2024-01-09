@@ -228,6 +228,12 @@ body {
 }
 
 
+@media only screen and (max-width: 310px)  {
+    .clock-frame {
+        transform: translate(-50%, -50%) scale(80%,80%);
+    }
+}
+
 @media only screen and (min-width: 480px) {
     
     .clock-frame {
@@ -252,6 +258,7 @@ body {
         transform: translate(-50%, -50%) scale(200%,200%);
     }
 }
+
 
 .change-time {
     display: none;
