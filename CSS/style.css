@@ -261,5 +261,36 @@ body {
 
 
 .change-time {
-    display: none;
+    display: flex;
+}
+
+.submit img {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.reset img {
+    width: 40px;
+    height: 40px;
+    margin: 15px auto;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+}
+
+.time {
+    height: 50px;
+    margin: auto 0px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: none;
+    border: 0;
+}
+
+.change {
+    font-size: large;
 }
